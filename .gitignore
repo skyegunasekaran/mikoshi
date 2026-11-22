@@ -1,0 +1,38 @@
+# Local environments, caches and editor state
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+.idea/
+.vscode/
+.coverage*
+htmlcov/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Local research, documentation source and generated runs
+/docs/
+/output/
+/outputs/
+/scripts/
+/tmp/
+/training/
+
+# Build products and release archives
+/build/
+/dist/
+*.egg-info/
+/*.zip
+/*.tar.gz

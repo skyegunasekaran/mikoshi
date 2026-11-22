@@ -1,0 +1,8 @@
+# Local experiment inputs, run snapshots, and generated receipts
+/runs/
+/recommended/
+/*-deployment.json
+/package-inventory.json
+/*-validation.json
+/validation.json
+/stop-receipt.json

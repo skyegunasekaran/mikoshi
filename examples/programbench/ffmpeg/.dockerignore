@@ -1,0 +1,3 @@
+*
+!requirements.lock
+!pytest_environment.py

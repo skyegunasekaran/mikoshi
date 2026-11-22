@@ -1,0 +1,22 @@
+{
+  "benchmark_repository": "https://github.com/facebookresearch/ProgramBench.git",
+  "benchmark_commit": "895f65916bc5ba34a915d36da321fde0301125ad",
+  "benchmark_version": "1.2.5",
+  "instance_id": "ffmpeg__ffmpeg.360a402",
+  "declared_source_commit": "360a4025fb2582d52d871ea2129d6b659598bb49",
+  "platform": "linux/amd64",
+  "inference_network": "bridge",
+  "evaluation_network": "bridge",
+  "image_repository": "programbench/ffmpeg_1776_ffmpeg.360a402",
+  "cleanroom_image": "programbench/ffmpeg_1776_ffmpeg.360a402@sha256:fbbf551125339eca7451eddd08e4d8afb3f3b26af0f1e5fc30c2dbba9d216322",
+  "full_image": "programbench/ffmpeg_1776_ffmpeg.360a402@sha256:a2028263dd1bc65d914f64708446f7da095a2b70a8b585a8275ca93796a3a006",
+  "hf_repository": "programbench/ProgramBench-Tests",
+  "hf_revision": "5954a1957b5e0d770ec2c5523506abd212806315",
+  "command_tag": "mikoshi-programbench-ffmpeg:895f65916bc5-command",
+  "evaluator_tag": "mikoshi-programbench-ffmpeg:895f65916bc5-evaluator",
+  "control_tag": "mikoshi-programbench-ffmpeg:895f65916bc5-control",
+  "local_resources": {"cpus": 4, "memory": "8g", "pids_limit": 512},
+  "reference_path": "/opt/programbench-reference/executable",
+  "reference_version": "git-2026-06-11-7da4887c",
+  "reference_configuration": "--disable-ffplay --disable-ffprobe --disable-autodetect --enable-zlib --enable-lzma --enable-iconv"
+}
