@@ -1,6 +1,7 @@
 include README.md EXPERIMENTS.md ARCHITECTURE.md SCHEMA.md AGENTS.md LICENSE THIRD_PARTY.md Makefile
 include pyproject.toml MANIFEST.in
 include .dockerignore
+include assets/readme/swarm.svg
 recursive-include tests *.py *.md
 prune docs
 prune examples

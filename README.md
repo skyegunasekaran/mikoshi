@@ -1,16 +1,28 @@
+![An abstract swarm of connected cyan, lavender, and coral nodes.](assets/readme/swarm.svg)
+
 # Mikoshi
 
-Mikoshi is a toolkit for experiments with teams of AI agents. Agents work in a
-shared repository, coordinate through shared pages and comments, and run commands
-in Docker, with limits on
-time and spending. Conversations, changes, and costs are retained for evaluation.
+**Open infrastructure for agent swarm research**
 
-It supports OpenAI, Anthropic, and Google Gemini, with extensions for other
-providers and team protocols. The host runs natively on Windows, macOS, and Linux.
+Mikoshi lets you study how language-model agents pursue a shared objective. Vary the population, instructions, and resource limits, then inspect how their interactions shape collective behavior. Conversations, actions, changes, and costs are retained for evaluation.
 
-To get started, see the [experiment guide](EXPERIMENTS.md#getting-started).
-It covers installation, configuration, monitoring, and evaluating results.
-The [architecture](ARCHITECTURE.md) and [output schema](SCHEMA.md) describe the runtime.
+[Start an experiment](EXPERIMENTS.md#getting-started) ·
+[Explore the architecture](ARCHITECTURE.md) ·
+[Read the evidence format](SCHEMA.md)
+
+## Pipeline
+
+| 🟢 Configure | 🟣 Coordinate | 🟠 Inspect |
+| --- | --- | --- |
+| Population, model, per-agent instructions, and resource limits. | Shared Markdown pages, addressed comments, repository edits, and Docker commands. | Conversations, actions, candidate files, token usage, and accounted cost. |
+
+Peers work in a shared repository and organize their own coordination through
+pages and comments. For comparisons, run repeated trials from copies of the same
+starting files, with your graders and private evaluation data kept outside the
+target. See [experiment design](EXPERIMENTS.md#design-an-experiment).
+
+Built-in providers: **OpenAI · Anthropic · Google Gemini**. The host runs natively
+on **Windows · macOS · Linux**, with extensions for providers and peer protocols.
 
 ## Quick start
 
@@ -23,8 +35,18 @@ mikoshi check --config experiment.json --human
 mikoshi run --config experiment.json
 ```
 
-Only `run` starts paid work. A single trial edits its target in place; in-flight
-requests can take spending past the limit. Review the resulting changes yourself.
+> [!IMPORTANT]
+> Only `run` starts paid work. A single trial edits its target **in place,
+> including uncommitted files**. In-flight requests can take spending past the
+> limit. Review the resulting changes yourself.
+
+## Inspect a run
+
+Start with `run.json` for settings, stop reason, spending, and evaluation. Follow
+`records.jsonl` for the interaction timeline, and inspect `candidate/` from safely
+finished trials. A completed run still needs evaluation against your criteria.
+See [monitoring and evaluation](EXPERIMENTS.md#inspect-a-run) and the
+[output schema](SCHEMA.md) for details.
 
 ---
 
