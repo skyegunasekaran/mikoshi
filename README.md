@@ -2,7 +2,7 @@
 
 # Mikoshi
 
-**Open infrastructure for agent swarm research**
+**Open infrastructure for agent swarm alignment research**
 
 Mikoshi lets you study how language-model agents pursue a shared objective. Vary the population, instructions, and resource limits, then inspect how their interactions shape collective behavior. Conversations, actions, changes, and costs are retained for evaluation.
 
